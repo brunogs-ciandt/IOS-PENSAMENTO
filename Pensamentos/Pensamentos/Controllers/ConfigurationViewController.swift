@@ -23,6 +23,21 @@ class ConfigurationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "Refresh"), object: nil, queue: nil) { _ in
+            self.refreshView()
+        }
+    }
+    
+    fileprivate func refreshView() {
+        switchChangeAuto.setOn(configuration.autoRefresh, animated: false)
+        sliderTimeSecond.setValue(Float(configuration.timeInterval), animated: false)
+        segmentColor.selectedSegmentIndex = configuration.darkColor ? 1 : 0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        refreshView()
     }
     
 

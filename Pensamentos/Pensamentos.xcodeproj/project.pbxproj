@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C38B299327F504BE00BEF39D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C38B299227F504BE00BEF39D /* Settings.bundle */; };
 		C38CB61527F48C6D000F53A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CB61427F48C6D000F53A0 /* AppDelegate.swift */; };
 		C38CB61727F48C6D000F53A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CB61627F48C6D000F53A0 /* SceneDelegate.swift */; };
 		C38CB61C27F48C6D000F53A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38CB61A27F48C6D000F53A0 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C38B299227F504BE00BEF39D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C38CB61127F48C6D000F53A0 /* Pensamentos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pensamentos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38CB61427F48C6D000F53A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C38CB61627F48C6D000F53A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				C38CB61D27F48C6F000F53A0 /* Assets.xcassets */,
 				C38CB62227F48C6F000F53A0 /* Info.plist */,
 				C38CB63127F49F66000F53A0 /* Controllers */,
+				C38B299227F504BE00BEF39D /* Settings.bundle */,
 			);
 			path = Pensamentos;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				C38CB62B27F48D77000F53A0 /* quotes.json in Resources */,
 				C38CB61E27F48C6F000F53A0 /* Assets.xcassets in Resources */,
 				C38CB61C27F48C6D000F53A0 /* Main.storyboard in Resources */,
+				C38B299327F504BE00BEF39D /* Settings.bundle in Resources */,
 				C38CB62A27F48D77000F53A0 /* Savoye LET.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

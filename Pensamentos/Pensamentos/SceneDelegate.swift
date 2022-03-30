@@ -25,6 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sceneDidBecomeActive(_ scene: UIScene) {
         print("SceneDelegate - sceneDidBecomeActive")
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "Refresh"), object: nil)
     }
 
     func sceneWillResignActive(_ scene: UIScene) {

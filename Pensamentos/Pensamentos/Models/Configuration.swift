@@ -9,7 +9,7 @@ import Foundation
 
 enum ConfigurationKeys: String {
     case timeInterval = "timeInterval"
-    case colorShcema = "colorShcema"
+    case colorShcema = "colorSchema"
     case autoRefesh = "autoRefresh"
 }
 

@@ -62,7 +62,7 @@ class QuotesViewController: UIViewController {
         super.viewWillAppear(animated)
         
         timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { timer in
            self.showQuote()
        }
         

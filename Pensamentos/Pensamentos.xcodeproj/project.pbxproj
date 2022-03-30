@@ -68,8 +68,6 @@
 		C38CB61327F48C6D000F53A0 /* Pensamentos */ = {
 			isa = PBXGroup;
 			children = (
-				C38CB61A27F48C6D000F53A0 /* Main.storyboard */,
-				C38CB61F27F48C6F000F53A0 /* LaunchScreen.storyboard */,
 				C38CB63327F49FD9000F53A0 /* Models */,
 				C38CB61427F48C6D000F53A0 /* AppDelegate.swift */,
 				C38CB61627F48C6D000F53A0 /* SceneDelegate.swift */,
@@ -103,6 +101,8 @@
 		C38CB63227F49FA5000F53A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C38CB61A27F48C6D000F53A0 /* Main.storyboard */,
+				C38CB61F27F48C6F000F53A0 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";

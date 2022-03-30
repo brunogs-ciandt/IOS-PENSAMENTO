@@ -21,10 +21,14 @@ class QuotesViewController: UIViewController {
     let quotesManager = QuotesManager()
     var timer:Timer?
     
+    let configuration = Configuration.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        configuration.autoRefresh = true
+        configuration.timeInterval = 5.0
+        configuration.darkColor = false
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -61,12 +65,19 @@ class QuotesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { timer in
-           self.showQuote()
-       }
+        let interval = configuration.timeInterval > 0 ? configuration.timeInterval : 5.0
+        
+        if(configuration.autoRefresh) {
+            timer = Timer.scheduledTimer(withTimeInterval: interval, repeats: true) { timer in
+               self.showQuote()
+           }
+        }
         
         showQuote()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        timer?.invalidate()
     }
 
 }

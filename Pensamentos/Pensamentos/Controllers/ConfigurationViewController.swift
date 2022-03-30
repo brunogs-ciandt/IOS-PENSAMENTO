@@ -16,6 +16,8 @@ class ConfigurationViewController: UIViewController {
     
     @IBOutlet weak var segmentColor: UISegmentedControl!
     
+    let configuration = Configuration.shared
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -25,14 +27,15 @@ class ConfigurationViewController: UIViewController {
     
 
     @IBAction func changeAuto(_ sender: UISwitch) {
-        
+        configuration.autoRefresh = sender.isOn
     }
     
     @IBAction func changeTime(_ sender: UISlider) {
-        
+        configuration.timeInterval = Double(sender.value).rounded(FloatingPointRoundingRule.up)
+        lblTimeSecond.text = "Mudar apos \(configuration.timeInterval) segundos"
     }
     
-    
     @IBAction func selectSegmentColor(_ sender: UISegmentedControl) {
+        configuration.darkColor = sender.isEnabledForSegment(at: 1)
     }
 }
